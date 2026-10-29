@@ -23,7 +23,8 @@ export function getStudentsAPI() {
 
 /**
  * Simulates a POST request to add a new student.
- * @param {Object} newStudentData - Object containing firstName, lastName, and email
+ * @param {Object} newStudentData - Object containing firstName,
+ * lastName, and email
  * @returns {Object} The saved student object with a unique ID
  */
 export function addStudentsAPI(newStudentData) {
