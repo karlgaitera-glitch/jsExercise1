@@ -2,7 +2,8 @@ import { addStudentsAPI, getStudentsAPI } from "./api.js";
 
 /**
  * Local state array that holds the current collection of student objects.
- * @type {Array<{id: number, firstName: string, lastName: string, email: string}>}
+ * @type {Array<{id: number, firstName: string,
+ * lastName: string, email: string}>}
  */
 let localStudent = [];
 
@@ -22,7 +23,8 @@ const studentTableBody = document.querySelector('#studentTableBody');
  * Renders student records dynamically into the table body DOM element.
  * Displays a placeholder message if the student list is empty.
  *
- * @param {Array<{id: number, firstName: string, lastName: string, email: string}>} dataArray - The array of student objects to render.
+ * @param {Array<{id: number, firstName: string, lastName: string,
+ * email: string}>} dataArray - The array of student objects to render.
  * @returns {void}
  */
 const renderTable = (dataArray) => {  
@@ -31,7 +33,8 @@ const renderTable = (dataArray) => {
   if (!dataArray || dataArray.length === 0) {
     studentTableBody.innerHTML = `
       <tr>
-        <td colspan="4" style="text-align: center;">No student records found.</td>
+        <td colspan="4" style="text-align: center;">
+        No student records found.</td>
       </tr>
     `;
     return;
@@ -51,8 +54,8 @@ const renderTable = (dataArray) => {
 
 /**
  * Handles the submit event for the student form.
- * Validates user input, adds the new student record via API, updates local state,
- * re-renders the table UI, and resets form inputs.
+ * Validates user input, adds the new student record via API, 
+ * updates local state, re-renders the table UI, and resets form inputs.
  *
  * @param {SubmitEvent} event - The DOM submit event triggered by the form.
  * @returns {void}
